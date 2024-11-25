@@ -1,34 +1,37 @@
+
+
 body {
-    background-color: rgb(39, 39, 219);
-    font-family: bai jamjuree;
+    background:rgb(2, 2, 175);
+    font-family: Bai Jamjuree;
 }
 
-#container{
-    display: flex;
+#container {
+    display: flex; 
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 4rem;
-    gap: 3rem; 
+    gap: 3rem;
 }
 
-.cartao{
+.cartao {
     margin: 1rem 1rem;
     height: 20rem;
     flex-grow: 1;
     flex-basis: calc(33% - 6rem);
 }
 
-.cartao__conteudo{
+.cartao__conteudo {
+    background-color: orange;
     text-align: center;
-    background-color: rgb(148, 52, 238);
-    height:100%;
+    /* background-color: aquamarine; */
+    height: 100%;
     transform-style: preserve-3d;
     transition: transform 300ms ease-in-out;
 }
 
-.cartao__conteudo h3{
-    color: rgb(3, 3, 180);
-    border: 1px solid rgb(3, 3, 180);
+.cartao__conteudo h3 {
+    color: rgb(235, 69, 8);
+    border: 1px solid rgb(63, 63, 238);
     text-align: left;
     padding: 0.5rem;
     position: absolute;
@@ -38,7 +41,7 @@ body {
     backface-visibility: hidden;
 }
 
-.cartao__conteudo p{
+.cartao__conteudo p {
     margin-top: 1rem;
     padding: 2rem;
     margin-top: 4rem;
@@ -51,17 +54,16 @@ body {
 }
 
 .cartao__conteudo__resposta p {
-    color: white;
+    color: orangered;
     font-weight: 700;
 }
 
-.cartao.active .cartao__conteudo{
+.cartao.active .cartao__conteudo {
     transform: rotateY(180deg);
-
 }
 
 .cartao__conteudo__pergunta,
-.cartao__conteudo__resposta{
+.cartao__conteudo__resposta {
     backface-visibility: hidden;
     position: absolute;
     height: 100%;
@@ -69,14 +71,14 @@ body {
     box-sizing: border-box;
 }
 
-.cartao__conteudo__resposta{
+.cartao__conteudo__resposta {
     transform: rotateY(180deg);
-    background-color: rgb(157, 87, 223);
-    border: 4px solid rgb(157, 87, 223);
+    background-color: rgb(63, 63, 238,0.5);
+    border: 4px solid  rgb(63, 63, 238);
 }
 
-footer{
-    background-color:black;
+footer {
+    background-color: black;
     color: white;
     position: fixed;
     bottom: 0;
@@ -90,18 +92,17 @@ footer p {
     margin-top: 0.5rem;
 }
 
-@media (max-width: 560px){
-
+@media (max-width: 560px) {
+    
     body {
-        background:  rgb(39, 39, 219);
+        background: rgb(2, 2, 175), no-repeat cover;
     }
 
-    .cartao{
-        flex: 1 0 calc(100% - rem)
+    .cartao {
+        flex: 1 0 calc(100% - 1rem)
     }
-    
-    
-    .cartao__conteudo h3{
+
+    .cartao__conteudo h3 {
         font-size: 3vw;
     }
 
